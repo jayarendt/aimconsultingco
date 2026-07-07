@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIM Consulting | Public Engagement Reimagined</title>
+  <meta name="description" content="AIM Consulting is a woman-owned public engagement firm in Sacramento helping public and private clients across Northern California design participation that brings communities together." />
+  <meta name="theme-color" content="#0f3a39" />
+  <meta property="og:title" content="AIM Consulting — Public Engagement Reimagined" />
+  <meta property="og:description" content="Woman-owned public engagement consultancy designing community-wide, youth, virtual, and experiential engagement for public and private clients across Northern California." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --teal-900: #0c2e2d;
+      --teal-800: #0f3a39;
+      --teal-700: #19524f;
+      --teal-500: #3a8783;
+      --teal-100: #d8ebe8;
+      --terra-600: #c75d3c;
+      --terra-500: #d96c4a;
+      --terra-200: #f3c7b6;
+      --cream-100: #faf6ef;
+      --cream-200: #f1ebdf;
+      --ink-900: #1a2326;
+      --ink-700: #3b4649;
+      --ink-500: #6b7679;
+      --line: #e2dccf;
+      --white: #ffffff;
+      --shadow-sm: 0 4px 14px rgba(12, 46, 45, 0.06);
+      --shadow-md: 0 16px 40px rgba(12, 46, 45, 0.12);
+      --shadow-lg: 0 28px 60px rgba(12, 46, 45, 0.18);
+      --radius-lg: 22px;
+      --radius-md: 14px;
+      --radius-sm: 8px;
+      --max: 1200px;
+      --serif: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Inter', system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--ink-900);
+      background: var(--cream-100);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button { font-family: inherit; }
+
+    .container {
+      width: min(calc(100% - 2.5rem), var(--max));
+      margin: 0 auto;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin: 0 0 0.6em;
+      color: var(--teal-900);
+    }
+    h1 { font-size: clamp(2.4rem, 4.8vw, 4.4rem); letter-spacing: -0.03em; word-wrap: break-word; overflow-wrap: break-word; }
+    h2 { font-size: clamp(2rem, 3.6vw, 3rem); }
+    h3 { font-size: clamp(1.2rem, 1.8vw, 1.5rem); }
+    p { margin: 0 0 1em; color: var(--ink-700); }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--terra-600);
+      margin-bottom: 1.2rem;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--terra-500);
+      border-radius: 2px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.95rem 1.7rem;
+      font-family: var(--sans);
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      border-radius: 999px;
+      border: 1.5px solid transparent;
+      cursor: pointer;
+      transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+    .btn-primary {
+      background: var(--teal-800);
+      color: var(--cream-100);
+    }
+    .btn-primary:hover {
+      background: var(--terra-500);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--teal-800);
+      border-color: var(--teal-800);
+    }
+    .btn-ghost:hover {
+      background: var(--teal-800);
+      color: var(--cream-100);
+      transform: translateY(-2px);
+    }
+    .btn .arrow { transition: transform 0.18s ease; }
+    .btn:hover .arrow { transform: translateX(4px); }
+
+    /* ───────── NAV ───────── */
+    nav.site-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.1rem 0;
+      background: rgba(250, 246, 239, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid transparent;
+      transition: padding 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+    nav.site-nav.scrolled {
+      padding: 0.7rem 0;
+      border-bottom-color: var(--line);
+      background: rgba(250, 246, 239, 0.95);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+    .nav-mark {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: var(--teal-800);
+      color: var(--cream-100);
+      display: grid; place-items: center;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.01em;
+    }
+    .nav-name {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: var(--teal-900);
+      line-height: 1.05;
+    }
+    .nav-name span {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-500);
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0; padding: 0;
+    }
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink-700);
+      transition: color 0.18s ease;
+      position: relative;
+    }
+    .nav-links a:hover { color: var(--terra-600); }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: -6px;
+      height: 2px;
+      background: var(--terra-500);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.2s ease;
+    }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    .nav-cta { display: inline-flex; }
+    .nav-cta .btn { padding: 0.6rem 1.3rem; font-size: 0.82rem; }
+
+    .nav-toggle {
+      display: none;
+      width: 44px; height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: transparent;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 18px; height: 2px;
+      background: var(--teal-800);
+      position: relative;
+    }
+    .nav-toggle span::before,
+    .nav-toggle span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px; height: 2px;
+      background: var(--teal-800);
+      transition: transform 0.2s ease, top 0.2s ease;
+    }
+    .nav-toggle span::before { top: -6px; }
+    .nav-toggle span::after { top: 6px; }
+    .nav-toggle[aria-expanded="true"] span { background: transparent; }
+    .nav-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+
+    /* ───────── HERO ───────── */
+    .hero {
+      position: relative;
+      padding: 11rem 0 7rem;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 60% 70% at 80% 20%, rgba(217, 108, 74, 0.18), transparent 60%),
+        radial-gradient(ellipse 70% 90% at 10% 90%, rgba(58, 135, 131, 0.22), transparent 65%),
+        linear-gradient(180deg, var(--cream-100) 0%, var(--cream-200) 100%);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 1px 1px, rgba(15, 58, 57, 0.08) 1px, transparent 0);
+      background-size: 28px 28px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+    }
+    .hero-copy { max-width: 640px; min-width: 0; }
+    .hero-copy h1 .accent {
+      color: var(--terra-600);
+      font-style: italic;
+      font-weight: 500;
+    }
+    .hero-copy .lead {
+      font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+      color: var(--ink-700);
+      margin-bottom: 2rem;
+      max-width: 540px;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-meta {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 540px;
+    }
+    .hero-meta dt {
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: var(--teal-800);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .hero-meta dd {
+      margin: 0;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-500);
+    }
+
+    /* hero visual — feature quote card */
+    .hero-visual {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      margin-left: auto;
+      min-width: 0;
+    }
+    .hero-feature {
+      position: relative;
+      background: linear-gradient(155deg, var(--teal-700) 0%, var(--teal-800) 60%, var(--teal-900) 100%);
+      border-radius: var(--radius-lg);
+      padding: 2.6rem 2.4rem;
+      color: var(--cream-100);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .hero-feature::before {
+      content: "";
+      position: absolute;
+      top: -30%; right: -20%;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--terra-500) 0%, transparent 70%);
+      opacity: 0.55;
+      z-index: -1;
+    }
+    .hero-feature::after {
+      content: "";
+      position: absolute;
+      bottom: -40%; left: -20%;
+      width: 320px; height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--teal-500) 0%, transparent 65%);
+      opacity: 0.45;
+      z-index: -1;
+    }
+    .hero-feature .feat-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--terra-200);
+      margin-bottom: 1.4rem;
+    }
+    .hero-feature .feat-eyebrow::before {
+      content: "";
+      width: 24px; height: 2px;
+      background: var(--terra-500);
+      border-radius: 2px;
+    }
+    .hero-feature blockquote {
+      margin: 0 0 1.8rem;
+      font-family: var(--serif);
+      font-size: clamp(1.3rem, 1.8vw, 1.55rem);
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.35;
+      color: var(--cream-100);
+    }
+    .hero-feature blockquote .word {
+      color: var(--terra-200);
+      font-weight: 600;
+    }
+    .hero-feature .feat-divider {
+      height: 1px;
+      background: rgba(241, 235, 223, 0.18);
+      margin: 1.6rem 0;
+    }
+    .hero-feature .feat-foot {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .hero-feature .feat-mark {
+      flex: none;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--cream-100);
+      color: var(--teal-900);
+      display: grid; place-items: center;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .hero-feature .feat-attr {
+      font-size: 0.92rem;
+      line-height: 1.35;
+      color: rgba(241, 235, 223, 0.92);
+    }
+    .hero-feature .feat-attr strong {
+      color: var(--cream-100);
+      font-weight: 600;
+      display: block;
+      font-family: var(--serif);
+      font-size: 1rem;
+    }
+
+    .hero-tag {
+      position: absolute;
+      bottom: -22px; right: 28px;
+      background: var(--cream-100);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.65rem 1.2rem 0.65rem 0.6rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      box-shadow: var(--shadow-md);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--teal-900);
+    }
+    .hero-tag .dot {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--terra-500);
+      color: var(--cream-100);
+      display: grid; place-items: center;
+      font-size: 0.78rem;
+    }
+    @keyframes hero-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    .hero-tag { animation: hero-float 5s ease-in-out infinite; }
+
+    /* ───────── SECTION TEMPLATE ───────── */
+    section { padding: 6rem 0; }
+    .section-head { max-width: 720px; margin-bottom: 3.5rem; }
+    .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+    .section-head.center .eyebrow { justify-content: center; }
+    .section-head p { font-size: 1.05rem; color: var(--ink-700); }
+
+    /* ───────── ABOUT ───────── */
+    .about {
+      background: var(--white);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .about-copy h2 .accent { color: var(--terra-600); font-style: italic; font-weight: 500; }
+    .about-copy p { font-size: 1.05rem; }
+    .about-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+    .pillar {
+      background: var(--cream-100);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 1.4rem 1.5rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .pillar:hover {
+      transform: translateY(-3px);
+      border-color: var(--teal-500);
+    }
+    .pillar .icon {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: var(--teal-100);
+      color: var(--teal-800);
+      display: grid; place-items: center;
+      margin-bottom: 0.8rem;
+    }
+    .pillar h4 {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--teal-900);
+      margin: 0 0 0.3rem;
+    }
+    .pillar p {
+      font-size: 0.85rem;
+      color: var(--ink-700);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .about-side {
+      position: relative;
+      align-self: stretch;
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      background: linear-gradient(160deg, var(--teal-800) 0%, var(--teal-700) 100%);
+      color: var(--cream-100);
+      overflow: hidden;
+    }
+    .about-side::before {
+      content: "";
+      position: absolute;
+      top: -40%; right: -30%;
+      width: 80%; aspect-ratio: 1;
+      background: radial-gradient(circle, var(--terra-500) 0%, transparent 70%);
+      opacity: 0.4;
+    }
+    .about-side .badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--terra-200);
+      margin-bottom: 1.2rem;
+      position: relative;
+    }
+    .about-side h3 {
+      font-family: var(--serif);
+      color: var(--cream-100);
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    .about-side ul {
+      list-style: none;
+      margin: 0; padding: 0;
+      position: relative;
+    }
+    .about-side li {
+      padding: 1rem 0;
+      border-top: 1px solid rgba(241, 235, 223, 0.18);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+    .about-side li:last-child { border-bottom: 1px solid rgba(241, 235, 223, 0.18); }
+    .about-side li .check {
+      flex: none;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--terra-500);
+      color: var(--cream-100);
+      display: grid; place-items: center;
+      font-size: 0.7rem;
+      margin-top: 1px;
+    }
+    .about-side .meta {
+      margin-top: 1.6rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid rgba(241, 235, 223, 0.18);
+      font-size: 0.82rem;
+      color: rgba(241, 235, 223, 0.75);
+      position: relative;
+    }
+
+    /* ───────── SERVICES ───────── */
+    .services { background: var(--cream-100); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .service {
+      position: relative;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.8rem 1.8rem;
+      overflow: hidden;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .service:hover {
+      transform: translateY(-6px);
+      border-color: var(--teal-500);
+      box-shadow: var(--shadow-md);
+    }
+    .service::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--teal-700), var(--terra-500));
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .service:hover::before { opacity: 1; }
+    .service .num {
+      font-family: var(--serif);
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--terra-600);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .service .glyph {
+      width: 56px; height: 56px;
+      border-radius: 16px;
+      background: var(--teal-100);
+      color: var(--teal-800);
+      display: grid; place-items: center;
+      margin-bottom: 1.4rem;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    .service:hover .glyph {
+      background: var(--teal-800);
+      color: var(--cream-100);
+    }
+    .service h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.6rem;
+    }
+    .service p {
+      font-size: 0.92rem;
+      color: var(--ink-700);
+      margin: 0;
+    }
+
+    /* ───────── APPROACH (timeline) ───────── */
+    .approach {
+      background: var(--white);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 1rem;
+      counter-reset: step;
+    }
+    .step {
+      position: relative;
+      padding: 2rem 1.4rem 1.6rem;
+      border-radius: var(--radius-md);
+      background: var(--cream-100);
+      border: 1px solid var(--line);
+    }
+    .step::before {
+      counter-increment: step;
+      content: "0" counter(step);
+      position: absolute;
+      top: 1.2rem; right: 1.4rem;
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--terra-500);
+    }
+    .step h4 {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      margin: 0 0 0.5rem;
+      color: var(--teal-900);
+    }
+    .step p {
+      font-size: 0.9rem;
+      color: var(--ink-700);
+      margin: 0;
+    }
+
+    /* ───────── CONTACT ───────── */
+    .contact {
+      background: var(--cream-100);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .contact-info { padding-top: 0.5rem; }
+    .contact-info h2 .accent { color: var(--terra-600); font-style: italic; font-weight: 500; }
+    .contact-info p { font-size: 1.02rem; }
+    .contact-list {
+      list-style: none;
+      margin: 2rem 0 0;
+      padding: 0;
+      display: grid;
+      gap: 1.1rem;
+    }
+    .contact-list li {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1rem 1.2rem;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      transition: transform 0.18s ease, border-color 0.18s ease;
+    }
+    .contact-list li:hover {
+      transform: translateX(4px);
+      border-color: var(--teal-500);
+    }
+    .contact-list .icon {
+      flex: none;
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: var(--teal-100);
+      color: var(--teal-800);
+      display: grid; place-items: center;
+    }
+    .contact-list .label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-500);
+      margin-bottom: 0.15rem;
+    }
+    .contact-list .value {
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: var(--teal-900);
+      line-height: 1.3;
+    }
+    .contact-list a.value:hover { color: var(--terra-600); }
+
+    .contact-form {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 2.4rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-form h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.4rem;
+    }
+    .contact-form .helper {
+      color: var(--ink-500);
+      font-size: 0.92rem;
+      margin-bottom: 1.6rem;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .field { margin-bottom: 1.1rem; }
+    .field label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-700);
+      margin-bottom: 0.45rem;
+    }
+    .field label .req { color: var(--terra-600); }
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--ink-900);
+      background: var(--cream-100);
+      border: 1.5px solid var(--line);
+      border-radius: var(--radius-sm);
+      transition: border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+    }
+    .field textarea { resize: vertical; min-height: 130px; }
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      outline: none;
+      border-color: var(--teal-500);
+      background: var(--white);
+      box-shadow: 0 0 0 4px rgba(58, 135, 131, 0.12);
+    }
+    .form-submit {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .form-submit small { color: var(--ink-500); font-size: 0.82rem; }
+
+    /* ───────── FOOTER ───────── */
+    footer.site-foot {
+      background: var(--teal-900);
+      color: rgba(241, 235, 223, 0.78);
+      padding: 5rem 0 2rem;
+    }
+    .foot-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1.1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(241, 235, 223, 0.12);
+    }
+    .foot-brand .nav-mark {
+      background: var(--cream-100);
+      color: var(--teal-900);
+    }
+    .foot-brand .nav-name { color: var(--cream-100); }
+    .foot-brand .nav-name span { color: rgba(241, 235, 223, 0.5); }
+    .foot-brand p {
+      margin-top: 1.4rem;
+      font-size: 0.88rem;
+      color: rgba(241, 235, 223, 0.65);
+      line-height: 1.6;
+      max-width: 360px;
+    }
+    .foot-col h5 {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream-100);
+      margin: 0 0 1.2rem;
+    }
+    .foot-col ul {
+      list-style: none;
+      margin: 0; padding: 0;
+      display: grid;
+      gap: 0.7rem;
+    }
+    .foot-col a {
+      font-size: 0.92rem;
+      color: rgba(241, 235, 223, 0.7);
+      transition: color 0.18s ease;
+    }
+    .foot-col a:hover { color: var(--terra-200); }
+    .foot-col p { font-size: 0.92rem; color: rgba(241, 235, 223, 0.7); margin: 0 0 0.4rem; line-height: 1.5; }
+    .foot-col p strong { color: var(--cream-100); font-weight: 600; }
+
+    .socials { display: flex; gap: 0.7rem; margin-top: 1.2rem; }
+    .socials a {
+      width: 38px; height: 38px;
+      display: grid; place-items: center;
+      border: 1px solid rgba(241, 235, 223, 0.2);
+      border-radius: 50%;
+      color: rgba(241, 235, 223, 0.78);
+      transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+    }
+    .socials a:hover {
+      background: var(--terra-500);
+      border-color: var(--terra-500);
+      color: var(--cream-100);
+    }
+
+    .foot-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: 1.6rem;
+      font-size: 0.82rem;
+      color: rgba(241, 235, 223, 0.55);
+    }
+    .foot-bottom .legal { display: flex; gap: 1.4rem; }
+    .foot-bottom a:hover { color: var(--terra-200); }
+
+    /* ───────── RESPONSIVE ───────── */
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .hero { padding: 9rem 0 6rem; }
+      .hero-visual { max-width: 520px; margin: 0 auto; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .approach-grid { grid-template-columns: repeat(2, 1fr); }
+      .foot-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .foot-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 720px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-toggle { display: inline-flex; }
+      nav.site-nav.menu-open .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--cream-100);
+        padding: 1.5rem 1.5rem 2rem;
+        gap: 1.4rem;
+        border-bottom: 1px solid var(--line);
+        box-shadow: var(--shadow-md);
+      }
+      .hero-meta { grid-template-columns: 1fr 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .approach-grid { grid-template-columns: 1fr; }
+      .about-pillars { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form { padding: 1.8rem; }
+      section { padding: 4.5rem 0; }
+      .foot-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* visually hidden (screen-reader only) */
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav class="site-nav" id="nav">
+  <div class="container nav-inner">
+    <a class="nav-brand" href="#top" aria-label="AIM Consulting home">
+      <div class="nav-mark" aria-hidden="true">A</div>
+      <div class="nav-name">
+        AIM Consulting
+        <span>Public Engagement</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary">
+        Start a project <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <button class="nav-toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle menu">
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<a id="top"></a>
+
+<!-- ═══════════ HERO ═══════════ -->
+<header class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Public engagement, reimagined</span>
+      <h1>Bringing communities <span class="accent">together</span> to make a positive difference.</h1>
+      <p class="lead">
+        AIM Consulting is a woman-owned firm that designs in-person and virtual engagement for public and private clients across Northern California. We provide the tools — and create the space — for communities to come together constructively and collaboratively.
+      </p>
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-primary">
+          Explore our services <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Talk with our team</a>
+      </div>
+
+      <dl class="hero-meta">
+        <div>
+          <dt>25+</dt>
+          <dd>Years engaging communities</dd>
+        </div>
+        <div>
+          <dt>6</dt>
+          <dd>Engagement disciplines</dd>
+        </div>
+        <div>
+          <dt>3</dt>
+          <dd>State &amp; local certifications</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-feature">
+        <span class="feat-eyebrow">Our belief</span>
+        <blockquote>
+          We believe in the power of community — the power to <span class="word">create</span>, the power to <span class="word">improve</span>, the power to <span class="word">change</span>.
+        </blockquote>
+        <div class="feat-divider"></div>
+        <div class="feat-foot">
+          <div class="feat-mark" aria-hidden="true">A</div>
+          <div class="feat-attr">
+            <strong>AIM Consulting</strong>
+            Sacramento, California
+          </div>
+        </div>
+      </div>
+      <div class="hero-tag" aria-hidden="true">
+        <span class="dot">✓</span>
+        Woman-owned · since 1996
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-copy">
+      <span class="eyebrow">About AIM Consulting</span>
+      <h2>Engagement that <span class="accent">respects every voice</span> in the room.</h2>
+      <p>
+        Those of us who work at AIM Consulting believe in the power of community. Whether we are working with small or large communities, in person or through virtual engagement, our team provides the tools and creates the space to come together constructively and collaboratively to make a positive difference.
+      </p>
+      <p>
+        AIM is a woman-owned small business serving public agencies and private clients throughout Northern California — designing participation that is inclusive, transparent, and built for results.
+      </p>
+
+      <div class="about-pillars">
+        <div class="pillar">
+          <div class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="17" cy="7" r="3"/><path d="M21 21v-2a4 4 0 0 0-3-3.87"/></svg>
+          </div>
+          <h4>Inclusive by design</h4>
+          <p>Every voice gets a seat at the table — and the tools to be heard.</p>
+        </div>
+        <div class="pillar">
+          <div class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h4>Hybrid &amp; virtual fluent</h4>
+          <p>From open houses to stakeholder meetings — wherever your community gathers.</p>
+        </div>
+        <div class="pillar">
+          <div class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h4>Strategy first</h4>
+          <p>Plans grounded in goals, audiences, and measurable outcomes.</p>
+        </div>
+        <div class="pillar">
+          <div class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12z"/></svg>
+          </div>
+          <h4>Trusted partner</h4>
+          <p>SBE-, ESB- and UDBE-certified — credentialed for public-sector work.</p>
+        </div>
+      </div>
+    </div>
+
+    <aside class="about-side" aria-labelledby="cert-title">
+      <span class="badge">Certifications &amp; credentials</span>
+      <h3 id="cert-title">Recognized for impact and inclusion.</h3>
+      <ul>
+        <li>
+          <span class="check" aria-hidden="true">✓</span>
+          <span><strong style="color:var(--cream-100)">Small Business Enterprise (SBE)</strong> — State of California, Department of General Services</span>
+        </li>
+        <li>
+          <span class="check" aria-hidden="true">✓</span>
+          <span><strong style="color:var(--cream-100)">Emerging &amp; Small Business</strong> — City of Sacramento</span>
+        </li>
+        <li>
+          <span class="check" aria-hidden="true">✓</span>
+          <span><strong style="color:var(--cream-100)">Underutilized Disadvantaged Business Enterprise (UDBE)</strong> — Caltrans</span>
+        </li>
+        <li>
+          <span class="check" aria-hidden="true">✓</span>
+          <span><strong style="color:var(--cream-100)">Woman-owned</strong> small business</span>
+        </li>
+      </ul>
+      <p class="meta">Headquartered in Midtown Sacramento, serving Northern California.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ═══════════ SERVICES ═══════════ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What we do</span>
+      <h2>Engagement programs built around your community.</h2>
+      <p>From neighborhood meetings to statewide stakeholder convenings, we tailor every program to the people in the room — and the people who can't make it.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service">
+        <span class="num">01 / Community</span>
+        <div class="glyph" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 0 1 0 20M2 12h20M12 2a15 15 0 0 0 0 20"/></svg>
+        </div>
+        <h3>Community-Wide Engagement</h3>
+        <p>Inclusive participation programs that bring residents, businesses, and decision-makers into the same conversation — from corridor studies to city-wide visioning.</p>
+      </article>
+
+      <article class="service">
+        <span class="num">02 / Youth</span>
+        <div class="glyph" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <h3>Youth Engagement</h3>
+        <p>Activities that make young people partners in shaping their schools, neighborhoods, and general plans — not just informed about them.</p>
+      </article>
+
+      <article class="service">
+        <span class="num">03 / Stakeholders</span>
+        <div class="glyph" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 10h18M8 4v14M16 4v14"/></svg>
+        </div>
+        <h3>Virtual Stakeholder Meetings</h3>
+        <p>Facilitated, agenda-driven sessions that move technical advisory groups, agency partners, and elected officials toward consensus — at distance.</p>
+      </article>
+
+      <article class="service">
+        <span class="num">04 / Open House</span>
+        <div class="glyph" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+        </div>
+        <h3>Virtual Open House</h3>
+        <p>Self-guided digital experiences that meet residents where they are — replicating the boards, materials, and conversations of an in-person event.</p>
+      </article>
+
+      <article class="service">
+        <span class="num">05 / Virtual</span>
+        <div class="glyph" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="14" height="14" rx="2"/><path d="M22 7l-6 5 6 5z"/></svg>
+        </div>
+        <h3>Virtual Engagement</h3>
+        <p>End-to-end strategies that combine surveys, live sessions, social outreach, and digital storytelling to engage hard-to-reach audiences.</p>
+      </article>
+
+      <article class="service">
+        <span class="num">06 / Experiential</span>
+        <div class="glyph" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 16v6M2 12h6M16 12h6M5 5l4 4M15 15l4 4M5 19l4-4M15 9l4-4"/></svg>
+        </div>
+        <h3>Experiential Events</h3>
+        <p>Pop-ups, walking tours, and interactive activations that turn engagement into something residents want to be part of — not something they have to attend.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ APPROACH ═══════════ -->
+<section class="approach" id="approach">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">How we work</span>
+      <h2>A repeatable approach, custom-fit to every community.</h2>
+      <p>Engagement isn't a checkbox. We start by listening, plan with intention, and report back with what we heard — every step transparent.</p>
+    </div>
+
+    <div class="approach-grid">
+      <div class="step">
+        <h4>Listen</h4>
+        <p>Understand the project, the politics, and the people who'll be affected — long before we design a single touchpoint.</p>
+      </div>
+      <div class="step">
+        <h4>Plan</h4>
+        <p>Build a program with clear objectives, audiences, channels, and metrics — aligned to your timeline and budget.</p>
+      </div>
+      <div class="step">
+        <h4>Engage</h4>
+        <p>Convene communities through the right blend of in-person, virtual, and experiential touchpoints.</p>
+      </div>
+      <div class="step">
+        <h4>Report</h4>
+        <p>Synthesize what we heard into actionable findings — and close the loop with the people who participated.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Ready to bring your community <span class="accent">into the conversation</span>?</h2>
+      <p>
+        Tell us about your project — a corridor study, a general plan update, a stakeholder convening, or something we haven't seen before. We'll respond within one business day.
+      </p>
+
+      <ul class="contact-list">
+        <li>
+          <div class="icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13 1.05.37 2.07.72 3a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l2.08-1.27a2 2 0 0 1 2.11-.45c.93.35 1.95.59 3 .72A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <span class="label">Phone</span>
+            <a class="value" href="tel:9164421168">916.442.1168</a>
+          </div>
+        </li>
+        <li>
+          <div class="icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <span class="label">Email</span>
+            <a class="value" href="mailto:info@aimconsultingco.com">info@aimconsultingco.com</a>
+          </div>
+        </li>
+        <li>
+          <div class="icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <span class="label">Office</span>
+            <span class="value">2523 J Street, Suite 202<br>Sacramento, CA 95816</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <form class="contact-form" action="mailto:info@aimconsultingco.com" method="post" enctype="text/plain" aria-label="Contact AIM Consulting">
+      <h3>Tell us about your project</h3>
+      <p class="helper">Required fields are marked with an asterisk.</p>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="firstName">First name <span class="req" aria-hidden="true">*</span></label>
+          <input id="firstName" name="firstName" type="text" required autocomplete="given-name" />
+        </div>
+        <div class="field">
+          <label for="lastName">Last name</label>
+          <input id="lastName" name="lastName" type="text" autocomplete="family-name" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" required autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="phone">Phone <span class="req" aria-hidden="true">*</span></label>
+          <input id="phone" name="phone" type="tel" required autocomplete="tel" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="topic">What can we help with?</label>
+        <select id="topic" name="topic">
+          <option value="">Select an engagement type…</option>
+          <option>Community-Wide Engagement</option>
+          <option>Youth Engagement</option>
+          <option>Virtual Stakeholder Meeting</option>
+          <option>Virtual Open House</option>
+          <option>Virtual Engagement</option>
+          <option>Experiential Events</option>
+          <option>Something else</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="message">Project details</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, audiences, and timeline."></textarea>
+      </div>
+
+      <div class="form-submit">
+        <button type="submit" class="btn btn-primary">
+          Send message <span class="arrow" aria-hidden="true">→</span>
+        </button>
+        <small>We respond within one business day.</small>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="site-foot">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="nav-brand">
+          <div class="nav-mark" aria-hidden="true">A</div>
+          <div class="nav-name">
+            AIM Consulting
+            <span>Public Engagement</span>
+          </div>
+        </div>
+        <p>
+          AIM is certified as a Small Business Enterprise by the State of California, Department of General Services; an Emerging and Small Business by the City of Sacramento; and an Underutilized Disadvantaged Business Enterprise by the State of California, Department of Transportation.
+        </p>
+        <div class="socials" aria-label="Social media">
+          <a href="https://www.facebook.com/aimconsultingco/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/aimconsultingco/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.youtube.com/user/AIMConsulting" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.546 15.568V8.432L15.818 12l-6.272 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h5>Sitemap</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Community-Wide Engagement</a></li>
+          <li><a href="#services">Youth Engagement</a></li>
+          <li><a href="#services">Virtual Stakeholder Meetings</a></li>
+          <li><a href="#services">Virtual Open House</a></li>
+          <li><a href="#services">Virtual Engagement</a></li>
+          <li><a href="#services">Experiential Events</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h5>Get in touch</h5>
+        <p><strong>916.442.1168</strong></p>
+        <p><a href="mailto:info@aimconsultingco.com">info@aimconsultingco.com</a></p>
+        <p>2523 J Street, Suite 202<br>Sacramento, CA 95816</p>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> AIM Consulting, Inc. All rights reserved.</span>
+      <div class="legal">
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // sticky nav shadow on scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 12);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // mobile menu
+  const toggle = document.getElementById('nav-toggle');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.querySelectorAll('#nav-links a').forEach(a =>
+    a.addEventListener('click', () => {
+      nav.classList.remove('menu-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    })
+  );
+
+  // current year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
